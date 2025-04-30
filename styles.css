@@ -24,6 +24,7 @@
 html,body{
     width: 100%;
     height: 100%;
+    /* cursor: none; */
 }
 
 #loader{
@@ -33,6 +34,7 @@ html,body{
     position: fixed;
     z-index: 999;
     padding: 14vw 18vh;
+    cursor: none;
 }
 .line{
     height: fit-content;
@@ -111,9 +113,10 @@ html,body{
 /* PAGE 1 */
 #page1{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #151515;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden; */
 }
 #page1 #nav{
     display: flex;
@@ -193,7 +196,7 @@ html,body{
 
 #page2{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #151515;
     position: relative;
     padding-top: 8vh;
@@ -205,6 +208,8 @@ html,body{
     /* background-color: red; */
     left: 28%;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-position: center;
+    background-size: cover;
 }
 #video-container img{
     position: absolute;
@@ -214,6 +219,7 @@ html,body{
     object-fit: cover;
 }
 #video-container #play-button{
+    /* transition: all ease; */
     width: 9vw;
     height: 18vh;
     border-radius: 50%;
@@ -233,6 +239,7 @@ html,body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
 }
 
 
@@ -281,11 +288,16 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3 #container1 #object1 img{
+#page3 #container1 #object1 .image-div{
     width: 100%;
     height: 55vh;
-    object-fit: cover;
     margin-bottom: 3vh;
+    background-color: red;
+}
+#page3 #container1 #object1 .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #page3 #container1 #object1 #text{
     width: 100%;
@@ -315,14 +327,19 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3 #container1 #object2 img{
-    width: 100%;
+#page3 #container1 #object2 .image-div{
+    width: 90%;
     height: 75vh;
-    object-fit: cover;
     margin-bottom: 3vh;
 }
-#page3 #container1 #object2 #text{
+#page3 #container1 #object2 .image-div img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#page3 #container1 #object2 #text{
+    width: 90%;
     height: 100%;
     display: flex;
     height: fit-content;
@@ -335,7 +352,7 @@ html,body{
     font-weight: 500;
 }
 #page3 #container1 #object2 #line{
-    width: 100%;
+    width: 90%;
     height: 0.1vh;
     background-color: #fff;
 }
@@ -366,6 +383,7 @@ html,body{
     border: 1px solid #fff;
     border-radius: 50%;
     margin-right: 5vw;
+    position: relative;
 }
 #page3 #container2 #object1{
     /* background-color: red; */
@@ -378,11 +396,15 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3 #container2 #object1 img{
-    width: 100%;
+#page3 #container2 #object1 .image-div{
+    width: 110%;
     height: 55vh;
-    object-fit: cover;
     margin-bottom: 3vh;
+}
+#page3 #container2 #object1 .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #page3 #container2 #object1 #text{
     width: 100%;
@@ -415,12 +437,16 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3 #container2 #object2 img{
+#page3 #container2 #object2 .image-div{
     width: 100%;
     height: 75vh;
+    margin-bottom: 3vh;
+}
+#page3 #container2 #object2 .image-div img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top;
-    margin-bottom: 3vh;
 }
 #page3 #container2 #object2 #text{
     width: 100%;
@@ -453,11 +479,15 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3  #object4 img{
+#page3  #object4 .image-div{
     width: 100%;
     height: 55vh;
-    object-fit: cover;
     margin-bottom: 3vh;
+}
+#page3  #object4 .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #page3  #object4 #text{
     width: 100%;
@@ -509,11 +539,15 @@ html,body{
     font-size: 2vw;
     margin-bottom: 3vh;
 }
-#page3 #container3 #object1 img{
+#page3 #container3 #object1 .image-div{
     width: 100%;
     height: 65vh;
-    object-fit: cover;
     margin-bottom: 3vh;
+}
+#page3 #container3 #object1 .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #page3 #container3 #object1 #text{
     width: 100%;
@@ -571,7 +605,10 @@ html,body{
 #container3 #object3 svg{
     transform: rotate(-90deg);
 }
-
+.image-div{
+    overflow: hidden;
+    position: relative;
+}
 /* PAGE 4 */
 
 #page4{
@@ -827,6 +864,43 @@ html,body{
     height: 100%;
     scale: 0.3;
 }
+._canvas_container{
+    z-index: 99999 !important;
+    pointer-events: none;
+}
+#object3 #text-cnt{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    transition: all ease 0.3s;
+}
+#object3 #text-cnt p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    color: black;
+    scale:0;
+    transition: all ease 0.3s;
+}
+#object3{
+    overflow: hidden;
+}
+#object3:hover #text-cnt{
+    scale:1;
+}
+#object3:hover #text-cnt p{
+    scale:1;
+}
+
 /* #crsr{
     width: 2.3vw;
     height: 2.3vw;
@@ -837,3 +911,20 @@ html,body{
     mix-blend-mode: difference;
     transform: translate(-50%,-50%);
 } */
+#flag{
+    opacity: 0;
+    height: 25vw;
+    width: 15vw;
+    transform: translate(-50%,-50%);
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* z-index: 99; */
+}
+#hero3{
+    position: relative;
+    width: fit-content;
+    /* background-color: red; */
+    z-index: 999;
+}
