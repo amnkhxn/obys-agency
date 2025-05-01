@@ -1172,9 +1172,16 @@ html,body{
     /* background-color: red; */
     z-index: 999;
 }
-
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    touch-action: none; /* Prevent touch gestures */
+  }
 
 @media (max-width:600px) {
+    #main{
+        overflow: hidden;
+    }
     #loader{
         padding: 40vh 4vw;
     }
