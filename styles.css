@@ -931,6 +931,9 @@ html,body{
 
 
 @media (max-width:600px) {
+    #loader{
+        padding: 40vh 4vw;
+    }
     #page1{
         min-height: 60vh;
         padding-top: 0.1px;
