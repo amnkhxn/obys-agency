@@ -98,9 +98,10 @@ tl.to("#main",{
 },"<")
 }
 
-function mouse(){
+function mousemagnet(){
     Shery.makeMagnet("#nav #navpart1 #svg #firstsvg, #nav #navpart2 h3");
-} 
+}
+ 
 
 function vplay(){
     var vd=document.querySelector("#video-container video");
@@ -188,10 +189,9 @@ document.addEventListener("mousemove",function(dets){
 })
 
 
-
+mousemagnet();
 sheryanimate();
 vplay();
-mouse();
 lcmt();
 loader();
 

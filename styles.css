@@ -1,7 +1,9 @@
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: white;
     font-family: "Plain Light";
 }
@@ -37,17 +39,31 @@ html,body{
     cursor: none;
 }
 .line{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 2vw;
 }
 #line1-part1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 1.9vw;
     gap: 1vw;
 }
@@ -67,14 +83,52 @@ html,body{
 }
 .line h2{
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 5vw;
     font-weight: 900;
     opacity: 0;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+@-webkit-keyframes anime {
+    0%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px white;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    48%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px white;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px white;
+        color:transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px white;
+        color:transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
 }
 @keyframes anime {
     0%{
@@ -119,27 +173,49 @@ html,body{
     /* overflow: hidden; */
 }
 #page1 #nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2.6vw 4vw 2.6vw 4vw;
 }
 #navpart1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 27vw;
 }
 #navpart1 #svg{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 2.3vw;
 }
 #navpart2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 3vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #navpart2 h3{
     font-weight: 500;
@@ -147,9 +223,15 @@ html,body{
 }
 .hero{
     /* background-color: rebeccapurple; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 72%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-left: 27.5vw;
     overflow: hidden;
@@ -167,6 +249,8 @@ html,body{
 }
 .hero:nth-child(2){
     margin-left: 19.8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 9vh;
 }
@@ -216,7 +300,8 @@ html,body{
     height: 100%;
     width: 100%;
     /* background-color: red; */
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #video-container #play-button{
     /* transition: all ease; */
@@ -228,9 +313,15 @@ html,body{
     z-index: 1;
     left: 68%;
     top: -12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #video-container #play-button i{
     font-size: 1.6vw;
@@ -238,7 +329,8 @@ html,body{
 #video-container video{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0;
 }
 
@@ -256,6 +348,8 @@ html,body{
 }
 #heading h1{
     font-size: 6.2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-transform: uppercase;
     margin-left: 19.8vw;
@@ -273,6 +367,8 @@ html,body{
     position: relative;
     width: 100%;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: #151515;
     padding: 10vh 6vw;
@@ -297,17 +393,26 @@ html,body{
 #page3 #container1 #object1 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #page3 #container1 #object1 #text{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 3vh;
 }
 #page3 #container1 #object1 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -335,18 +440,28 @@ html,body{
 #page3 #container1 #object2 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 #page3 #container1 #object2 #text{
     width: 90%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 1vh;
 }
 #page3 #container1 #object2 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -369,10 +484,16 @@ html,body{
 #page3 #container2{
     width: 100%;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     background-color: #151515;
     padding: 10vh 6vw;
     position: relative;
@@ -404,17 +525,26 @@ html,body{
 #page3 #container2 #object1 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #page3 #container2 #object1 #text{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 3vh;
 }
 #page3 #container2 #object1 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -445,18 +575,28 @@ html,body{
 #page3 #container2 #object2 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
 }
 #page3 #container2 #object2 #text{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 1vh;
 }
 #page3 #container2 #object2 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -487,17 +627,26 @@ html,body{
 #page3  #object4 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #page3  #object4 #text{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 3vh;
 }
 #page3 #object4 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -547,17 +696,26 @@ html,body{
 #page3 #container3 #object1 .image-div img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #page3 #container3 #object1 #text{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 3vh;
 }
 #page3 #container3 #object1 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -571,14 +729,26 @@ html,body{
 #page3 #container4{
     width: 100%;
     height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #page3 #container4 #object3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
@@ -590,9 +760,15 @@ html,body{
     color: #fff;
 }
 #object3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #object3 svg{
     width: 100%;
@@ -600,10 +776,14 @@ html,body{
     scale:0.3;
 }
 #container2 #object3 svg{
-    transform: rotate(320deg);
+    -webkit-transform: rotate(320deg);
+        -ms-transform: rotate(320deg);
+            transform: rotate(320deg);
 }
 #container3 #object3 svg{
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
 }
 .image-div{
     overflow: hidden;
@@ -622,6 +802,8 @@ html,body{
     text-transform: uppercase;
     margin-left: 19.8vw;
     letter-spacing: 0.3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 4vh;
 }
@@ -656,6 +838,8 @@ html,body{
 }
 #page-4flex{
     margin-top: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     width: calc(100% - 27.8vw);
@@ -667,6 +851,8 @@ html,body{
 }
 #page-4flex p{
     width: 20%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -675,14 +861,22 @@ html,body{
     position: relative;
     margin-top: -40vh;
     left: 55%;
+    height:-webkit-fit-content;
+    height:-moz-fit-content;
     height:fit-content;
     background-color: #3F7DF4;
     padding: 4vw 3vw;
 }
 #awards .awards-elem{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 2px solid #fff;
     margin-bottom: 5.5vh;
 }
@@ -745,13 +939,19 @@ html,body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
-    transform: translateX(calc(-100% - 20px));
+    -webkit-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
 
     /* background-color: red; */
-    animation-name: animee;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: animee;
+            animation-name: animee;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     animation-direction: reverse;
 }
 #page5 #elem h1{
@@ -763,10 +963,14 @@ html,body{
     display: inline-block;
     margin-right: 16px;
     /* background-color: red; */
-    animation-name: animee;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: animee;
+            animation-name: animee;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 #page5 #elem h1 span{
     font-family: silk serif;
@@ -780,12 +984,24 @@ html,body{
     font-weight: 400;
     color: transparent;
 }
-@keyframes animee {
+@-webkit-keyframes animee {
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to{
-        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+    }
+}
+@keyframes animee {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
     }
 }
 
@@ -803,6 +1019,8 @@ html,body{
 #headingpage6{
     position: relative;
     margin-top: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     /* display: flex;
@@ -819,6 +1037,8 @@ html,body{
     text-transform: uppercase;
     margin-left: 19.8vw;
     letter-spacing: 0.3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 4vh;
 }
@@ -830,8 +1050,12 @@ html,body{
      font-weight: 500;
 }
 #page6content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-left: 27.8vw;
     padding: 10vh 12vw 12vh 0;
 }
@@ -876,19 +1100,35 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     scale: 0;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
 #object3 #text-cnt p{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 70%;
     color: black;
     scale:0;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
 #object3{
@@ -915,7 +1155,9 @@ html,body{
     opacity: 0;
     height: 25vw;
     width: 15vw;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     /* position: relative; */
     top: 0;
     left: 0;
@@ -924,6 +1166,8 @@ html,body{
 }
 #hero3{
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     /* background-color: red; */
     z-index: 999;
@@ -942,7 +1186,9 @@ html,body{
     #page1 #nav{
         width: 100%;
         /* background-color: blue; */
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 4.6vw 4vw 2.6vw 4vw;
         position: fixed;
         top: 0;
@@ -950,9 +1196,15 @@ html,body{
     #navpart1{
         width: 100%;
         /* background-color: red; */
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         
     }
     #navpart1 p{
@@ -977,9 +1229,16 @@ html,body{
     }
     .hero:nth-child(2){
         margin-left: -6.5vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-top: 20vh;
     }
     .hero:nth-child(2)::before{
@@ -1006,7 +1265,9 @@ html,body{
         width: 20vw;
         height: 18vh;
         position: absolute;
-        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
         left: 50%;
         top: 50%;
     }
@@ -1048,6 +1309,8 @@ html,body{
     margin-bottom: 2vh;
 }
 #page3 #container1 #object1 #text p{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     font-family: plain light;
     font-weight: 500;
@@ -1184,6 +1447,8 @@ html,body{
 #page4 #firstp{
 
     font-size: 4vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 70%;
     margin-left: 7.8vw;
@@ -1200,9 +1465,15 @@ html,body{
     padding-right: 4vw;
     padding-left: 4vw;
     margin-top: 0vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-flow: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: column-reverse;
+        flex-flow: column-reverse;
     position: relative;
     width: 100%;
     margin-left: 4vw;
@@ -1214,6 +1485,8 @@ html,body{
 #page-4flex p{
     margin-top: 0vh;
     width: 70%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -1253,6 +1526,8 @@ html,body{
 
 #page6{
     width: 100%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
     min-height: fit-content;
     background-color: #151515;
     padding: 0.1px;
@@ -1261,6 +1536,8 @@ html,body{
 #headingpage6{
     position: relative;
     margin-top: 2vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     /* display: flex;
@@ -1277,6 +1554,8 @@ html,body{
     text-transform: uppercase;
     margin-left: 4vw;
     letter-spacing: 0.3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 4vh;
 }
