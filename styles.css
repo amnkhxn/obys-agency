@@ -163,6 +163,7 @@ html,body{
 #main{
     position: relative;
     background-color: #0B0B0B;
+    overflow: hidden;
 }
 /* PAGE 1 */
 #page1{
