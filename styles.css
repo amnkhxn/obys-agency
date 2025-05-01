@@ -1177,13 +1177,18 @@ html,body{
     height: 100%;
     touch-action: none; /* Prevent touch gestures */
   }
-
 @media (max-width:600px) {
     #main{
         overflow: hidden;
     }
     #loader{
         padding: 40vh 4vw;
+        z-index: 9999999;
+    }
+    .no-scroll {
+        overflow: hidden;
+        height: 100%;
+        touch-action: none; /* Prevent touch gestures */
     }
     #page1{
         min-height: 60vh;
@@ -1196,7 +1201,7 @@ html,body{
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-        padding: 4.6vw 4vw 2.6vw 4vw;
+        padding: 8vw 4vw 2.6vw 8vw;
         position: fixed;
         top: 0;
     }
@@ -1218,7 +1223,7 @@ html,body{
         display: none;
     }
     #navpart1 #svg{
-        gap: 75vw;
+        gap: 70vw;
     }
     
     #navpart2{
@@ -1269,7 +1274,7 @@ html,body{
     }
     #video-container #play-button{
         /* transition: all ease; */
-        width: 20vw;
+        width: 35vw;
         height: 18vh;
         position: absolute;
         -webkit-transform: translate(-50%,-50%);
@@ -1279,7 +1284,7 @@ html,body{
         top: 50%;
     }
     #video-container #play-button i{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
 
