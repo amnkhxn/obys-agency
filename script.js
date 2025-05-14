@@ -30,6 +30,7 @@ function lcmt(){
   ScrollTrigger.refresh();
   }
 function loader(){
+    document.body.classList.add("no-scroll");
     var tl=gsap.timeline();
 
 
@@ -78,7 +79,10 @@ tl.from("#page1",{
 
 tl.to("#loader",{
     display:"none",
-    duration:0.0001
+    duration:0.0001,
+    onComplete: function(){
+        document.body.classList.remove("no-scroll");
+    }
 },"<")
 
 tl.from(".hero h1,#hero3 h2",{
@@ -97,12 +101,9 @@ tl.to("#main",{
     duration:1
 },"<")
 }
-
 function mousemagnet(){
     Shery.makeMagnet("#nav #navpart1 #svg #firstsvg, #nav #navpart2 h3");
 }
- 
-
 function vplay(){
     var vd=document.querySelector("#video-container video");
 
@@ -155,20 +156,13 @@ videoContainer.addEventListener('click',function(){
     }
 })
 }
-
-// var imgd=document.querySelector(".image-div img");
-// imgd.addEventListener("mouseenter",function(){
-//     imgd.style.cursor="none"
-// });
-
 function sheryanimate(){
     Shery.imageEffect(".image-div",{
         style:5,
-        config:{"a":{"value":3.44,"range":[0,30]},"b":{"value":0.75,"range":[-1,1]},"zindex":{"value":"999999999","range":[-9999999,9999999]},"aspect":{"value":0.7142857142857143},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.67,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":2},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.49,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}},
-        gooey:true
+        config:{"a":{"value":2,"range":[0,30]},"b":{"value":1,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7615719672344299},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0,"range":[0,10]},"metaball":{"value":0.52,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.01,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":6.87,"range":[0,100]}},
+        gooey:true,
     })
 }
-
 var trgt=document.querySelector("#hero3");
 var flgg=document.querySelector("#flag");
 trgt.addEventListener("mouseenter",function(){
